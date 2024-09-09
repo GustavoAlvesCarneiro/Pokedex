@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeDex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>pokedex do paquetá</h1>
+    <% results.forEach(pokemon => { %>
+    <div>
+      <p id="1">Nome: <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></p>
+      <p id="2">URL: <%= pokemon.url %></p>
+    </div>
+    <% }) %>
+  </body>
+
+</html>
+
+<style>
+
+body {
+  font-family: 'Press Start 2P', cursive; 
+  background-color: #ffcb05; 
+  color: #2a75bb; 
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #3b4cca; 
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #ffcb05; 
+}
+
+div {
+  background-color: #fff;
+  border: 3px solid #3b4cca;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+div:hover {
+  transform: scale(1.03);
+}
+
+a {
+  text-decoration: none;
+  color: #ff0000; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#1 {
+  font-weight: bold;
+  color: #333;
+}
+
+#2 {
+  color: #777;
+  font-size: 0.9em;
+}
+
+</style>
